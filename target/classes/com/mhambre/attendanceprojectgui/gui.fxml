@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="425.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mhambre.attendanceprojectgui.ProjectController">
+   <children>
+      <AnchorPane prefHeight="503.0" prefWidth="563.0">
+         <children>
+            <MenuBar prefHeight="25.0" prefWidth="425.0" style="-fx-background-color: ededed;">
+              <menus>
+                <Menu mnemonicParsing="false" style="-fx-font-family: Avenir; -fx-font-size: 12px; -fx-font-color: #9a9a9a;" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#loadLogFile" text="Select Log" />
+                        <MenuItem mnemonicParsing="false" onAction="#loadRosterFile" text="Select Roster" />
+                        <MenuItem id="loadButton" fx:id="loadButton" disable="true" mnemonicParsing="false" onAction="#runProgram" text="Load" />
+                        <MenuItem mnemonicParsing="false" onAction="#onExit" text="Exit" />
+                     </items>
+                </Menu>
+                <Menu mnemonicParsing="false" style="-fx-font-family: Avenir; -fx-font-size: 12px;" text="About">
+                  <items>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" style="-fx-effect: null;" text="Author">
+                           <content>
+                              <Label text="Author: Matthew Hambrecht" />
+                           </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" style="-fx-effect: null;" text="Email">
+                           <content>
+                              <Label text="Email: mhambre1@umbc.edu" />
+                           </content>
+                        </CustomMenuItem>
+                        <CustomMenuItem hideOnClick="false" mnemonicParsing="false" style="-fx-effect: null;" text="Student ID">
+                           <content>
+                              <Label text="UMBC ID: ZQ33815" />
+                           </content>
+                        </CustomMenuItem>
+                  </items>
+                </Menu>
+              </menus>
+               <effect>
+                  <DropShadow height="5.93" radius="0.9824999999999999" width="0.0">
+                     <color>
+                        <Color opacity="0.9961685538291931" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </MenuBar>
+            <ComboBox fx:id="optionsList" disable="true" layoutX="14.0" layoutY="41.0" onAction="#lockBoxes" onMouseExited="#lockBoxes" prefHeight="25.0" prefWidth="243.0" promptText="Select Option" style="-fx-font-family: Avenir; -fx-font-size: 11px; -fx-background-color: ededed; -fx-font-color: #757575; -fx-border-radius: 5 0 0 0; -fx-background-radius: 5 0 0 0;" />
+            <Button fx:id="clearButton" disable="true" layoutX="340.0" layoutY="41.0" mnemonicParsing="false" onAction="#clearField" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: ededed; -fx-border-radius: 0 5 0 0; -fx-background-radius: 0 5 0 0;" text="Clear" textFill="#757575">
+               <font>
+                  <Font name="Avenir Book" size="11.0" />
+               </font>
+            </Button>
+            <Button fx:id="runButton" disable="true" layoutX="257.0" layoutY="41.0" mnemonicParsing="false" onAction="#runAction" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: ededed; -fx-border-radius: 0 0 0 0; -fx-background-radius: 0 0 0 0;" text="Run" textFill="#757575">
+               <font>
+                  <Font name="Avenir Book" size="11.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="outputBox" editable="false" layoutX="14.0" layoutY="91.0" prefHeight="365.0" prefWidth="401.0" style="-fx-background-radius: 0 0 5 5; -fx-border-radius: 0 0 5 5; -fx-text-box-border: transparent; -fx-font-color: #757575;">
+               <font>
+                  <Font name="Avenir Book" size="11.0" />
+               </font></TextArea>
+            <TextField fx:id="nameInput" disable="true" layoutX="14.0" layoutY="66.0" prefHeight="26.0" prefWidth="231.0" promptText="Name" style="-fx-background-radius: 0 0 0 0; -fx-border-radius: 0 0 0 0; -fx-text-box-border: transparent; -fx-font-color: #757575;">
+               <font>
+                  <Font name="Avenir Book" size="11.0" />
+               </font></TextField>
+            <TextField fx:id="dateInput" disable="true" layoutX="245.0" layoutY="66.0" prefHeight="26.0" prefWidth="83.0" promptText="Date" style="-fx-background-radius: 0 0 0 0; -fx-border-radius: 0 0 0 0; -fx-text-box-border: transparent; -fx-font-color: #757575;">
+               <font>
+                  <Font name="Avenir Book" size="11.0" />
+               </font></TextField>
+            <TextField fx:id="timeInput" disable="true" layoutX="328.0" layoutY="66.0" prefHeight="26.0" prefWidth="83.0" promptText="Time" style="-fx-background-radius: 0 0 0 0; -fx-border-radius: 0 0 0 0; -fx-text-box-border: transparent; -fx-font-color: #757575;">
+               <font>
+                  <Font name="Avenir Book" size="11.0" />
+               </font></TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
