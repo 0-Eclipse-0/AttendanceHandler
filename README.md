@@ -1,2 +1,3 @@
 # AttendanceHandler
-GUI for parsing through student attendance data in the format of Lastname, Firstname, Time, Date
+Final project for CMSC 331: Principles of Programming Lanaguages with the purpose of parsing through 
+and organizing student attendance data.
